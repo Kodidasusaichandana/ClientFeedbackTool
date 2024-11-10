@@ -1,0 +1,176 @@
+/* Body styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Center container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input and button styles */
+input[type="file"], input[type="text"], button {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+input[type="file"], input[type="text"] {
+    border: 1px solid #ced4da;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Result section */
+.result-section {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    color: #495057;
+}
+
+.result-section h3 {
+    color: #007bff;
+}
+
+.result-section p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Body styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Center container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input and button styles */
+input[type="file"], input[type="text"], button {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+input[type="file"], input[type="text"] {
+    border: 1px solid #ced4da;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Result section */
+.result-section {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    color: #495057;
+}
+
+.result-section h3 {
+    color: #007bff;
+}
+
+.result-section p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,17 @@
+Flask==2.3.2
+opencv-python-headless==4.8.0.76  # Headless version for server environments without GUI
+googletrans==4.0.0-rc1
+deepface==0.0.79
+pandas==2.1.1
+fpdf==1.7.2
+opencv-python==4.8.0.76
+numpy==1.23.5
+torch==2.0.1
+torchvision==0.15.2
+requests==2.31.0
+fer==22.5.0
+pyaudio==0.2.13
+SpeechRecognition==3.10.0
+moviepy==1.0.3
+textblob==0.17.1
+pyAudioAnalysis==0.3.14

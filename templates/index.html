@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Feedback Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Client Feedback Comparison</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="mt-4">
+            <div class="mb-3">
+                <input type="text" name="patient_name" placeholder="Enter Client Name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="before_video">Before Treatment Video:</label>
+                <input type="file" name="before_video" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="after_video">After Treatment Video:</label>
+                <input type="file" name="after_video" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="language">Select Language:</label>
+                <select name="language" id="language" class="form-control" required>
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="es">Spanish</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="kn">Kannada</option>
+                    <option value="bn">Bengali</option>
+                    <option value="ml">Malyali</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="pa">Punjabi</option>
+                    <!-- Add other languages as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze Videos</button>
+        </form>
+
+        {% if before_result and after_result %}
+        <div class="result-section mt-5">
+            <h3>Analysis Results for {{ before_result['patient_name'] }}</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>{{ before_result['stage'] }}</h4>
+                    <img src="{{ before_result['image_path'] }}" alt="Patient Image" class="img-fluid">
+                    <p><strong>Dominant Emotion:</strong> {{ before_result['dominant_emotion'] }}</p>
+                    <h5>Emotion Percentages:</h5>
+                    <ul>
+                        {% for emotion, percentage in before_result['emotion_percentages'].items() %}
+                        <li>{{ emotion }}: {{ percentage }}%</li>
+                        {% endfor %}
+                    </ul>
+                    <h5>Overall Sentiment:</h5>
+                    <p><strong>Polarity:</strong> {{ before_result['overall_sentiment']['polarity'] }}</p>
+                    <p><strong>Subjectivity:</strong> {{ before_result['overall_sentiment']['subjectivity'] }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>{{ after_result['stage'] }}</h4>
+                    <img src="{{ after_result['image_path'] }}" alt="Patient Image" class="img-fluid">
+                    <p><strong>Dominant Emotion:</strong> {{ after_result['dominant_emotion'] }}</p>
+                    <h5>Emotion Percentages:</h5>
+                    <ul>
+                        {% for emotion, percentage in after_result['emotion_percentages'].items() %}
+                        <li>{{ emotion }}: {{ percentage }}%</li>
+                        {% endfor %}
+                    </ul>
+                    <h5>Overall Sentiment:</h5>
+                    <p><strong>Polarity:</strong> {{ after_result['overall_sentiment']['polarity'] }}</p>
+                    <p><strong>Subjectivity:</strong> {{ after_result['overall_sentiment']['subjectivity'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
